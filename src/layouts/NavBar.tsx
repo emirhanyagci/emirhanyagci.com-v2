@@ -6,7 +6,7 @@ import NavSocial from "../components/NavSocial";
 const StyledNav = styled.nav`
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1.5fr;
   border-radius: var(--layout-item-radius);
   background-color: var(--color-brand-blue-1);
   background-image: url("/public/images/background-noise.png"),
@@ -24,7 +24,7 @@ export default function NavBar() {
       <div>
         <NavLinks />
       </div>
-      <div className="navbarSocial">
+      <div>
         <NavSocial />
       </div>
     </StyledNav>

@@ -24,7 +24,9 @@ const navOptions = [
 ];
 const LinkContainer = styled.ul`
   display: flex;
+  gap: 1rem;
   justify-content: center;
+  align-items: center;
 `;
 export default function NavLinks() {
   return (
