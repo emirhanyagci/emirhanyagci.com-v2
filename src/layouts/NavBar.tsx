@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../components/Logo";
 import NavLinks from "../components/NavLinks";
+import NavSocial from "../components/NavSocial";
 
 const StyledNav = styled.nav`
   display: grid;
@@ -23,7 +24,9 @@ export default function NavBar() {
       <div>
         <NavLinks />
       </div>
-      <div className="navbarSocial">asdc</div>
+      <div className="navbarSocial">
+        <NavSocial />
+      </div>
     </StyledNav>
   );
 }

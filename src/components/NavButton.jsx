@@ -7,6 +7,8 @@ const Button = styled.button`
   font-size: 1.1rem;
   padding: 0.9rem 1rem;
   border-radius: 8px;
+  transition: all 300ms;
+  cursor: pointer;
   &:hover {
     background-color: var(--color-brand-blue-2);
   }
