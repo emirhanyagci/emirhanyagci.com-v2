@@ -1,3 +1,4 @@
+import NavBar from "./layouts/NavBar.js";
 import StarBackground from "./layouts/StarBackground.js";
 import GlobalStyles from "./styles/GlobalStyles.js";
 import ResetStyles from "./styles/ResetStyle.js";
@@ -9,8 +10,6 @@ const Container = styled.div`
 const LayoutItem = styled.section`
   position: relative;
   z-index: 10;
-  height: 250px;
-  background-color: #1d1d2b;
 `;
 function App() {
   return (
@@ -20,8 +19,9 @@ function App() {
       <>
         <StarBackground />
         <Container className="appContainer">
-          <LayoutItem>aAAAAAAAAA</LayoutItem>
-          <LayoutItem>BBBBBBBB</LayoutItem>
+          <LayoutItem>
+            <NavBar />
+          </LayoutItem>
         </Container>
       </>
     </>

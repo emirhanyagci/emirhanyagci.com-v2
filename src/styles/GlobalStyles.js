@@ -1,16 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-:root{
-	--color-brand-blue-1:#1D1D2B;
-	--color-brand-blue-2:rgba(33, 33, 62, 0.5);
-	--color-logo:#39E9F4;
-	--color-brand-orange-100 : #D1A124;
-	--color-brand-orange-200 : #C89D2A;
-}
 *{
   font-family: 'josefin';
 }
+:root{
+	--color-brand-blue-1:#1D1D2B;
+	--color-brand-blue-2:rgba(30, 41, 59,0.6);
+	--color-logo:#39E9F4;
+	--color-brand-orange-100 : #D1A124;
+	--color-brand-orange-20v0 : #C89D2A;
+
+
+  --layout-item-radius : 12px;
+}
+
 @media only screen and (min-width: 640px) {
   .appContainer {
     width: 100%;
