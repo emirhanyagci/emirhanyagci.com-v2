@@ -3,7 +3,7 @@ import { BsGithub } from "react-icons/bs";
 import styled from "styled-components";
 
 const StyledNavSocial = styled.div`
-  text-align: center;
+  text-align: end;
 `;
 const SocialIcons = styled.div`
   display: inline-flex;

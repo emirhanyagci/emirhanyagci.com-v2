@@ -10,7 +10,7 @@ const StyledLogo = styled.div`
 `;
 const Label = styled.span`
   color: var(--color-logo);
-  letter-spacing: 2px;
+  letter-spacing: 0.15rem;
   font-size: 1.3rem;
   font-weight: 300;
 `;

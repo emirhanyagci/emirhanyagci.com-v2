@@ -4,9 +4,12 @@ const GlobalStyles = createGlobalStyle`
 *{
   font-family: 'josefin';
 }
+html{
+    font-size: 16px;
+  }
 :root{
 	--color-brand-blue-1:#1D1D2B;
-	--color-brand-blue-2:rgba(30, 41, 59,0.6);
+	--color-brand-blue-2:rgba(30, 41, 59);
 	--color-logo:#39E9F4;
 	--color-brand-orange-100 : #D1A124;
 	--color-brand-orange-20v0 : #C89D2A;
@@ -19,21 +22,34 @@ const GlobalStyles = createGlobalStyle`
   .appContainer {
     width: 100%;
   }
+  html{
+    font-size: 13px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .appContainer {
-    width: 90%;
+    width: 100%;
   }
+  html{
+    font-size: 14px;
+  }
+
 }
 @media only screen and (min-width: 1024px) {
   .appContainer {
     width: 85%;
+  }
+  html{
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 1280px) {
   .appContainer {
     width: 90%;
 	max-width: 1280px;
+  }
+  html{
+    font-size: 16px;
   }
 }
 

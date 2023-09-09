@@ -31,9 +31,9 @@ const LinkContainer = styled.ul`
 export default function NavLinks() {
   return (
     <LinkContainer>
-      {navOptions.map(({ id, label }) => (
-        <li key={id}>
-          <NavButton href={id}>{label}</NavButton>
+      {navOptions.map(({ value, label }) => (
+        <li key={value}>
+          <NavButton href={value}>{label}</NavButton>
         </li>
       ))}
     </LinkContainer>
