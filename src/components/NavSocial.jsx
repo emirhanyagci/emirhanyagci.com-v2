@@ -13,6 +13,7 @@ const SocialIcons = styled.div`
   background-color: white;
   cursor: pointer;
   & > i {
+    transition: 200ms all;
   }
   & > i:hover {
     transform: scale(1.2);

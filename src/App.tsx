@@ -1,3 +1,4 @@
+import MainContent from "./layouts/MainContent.js";
 import NavBar from "./layouts/NavBar.js";
 import StarBackground from "./layouts/StarBackground.js";
 import GlobalStyles from "./styles/GlobalStyles.js";
@@ -21,6 +22,9 @@ function App() {
         <Container className="appContainer">
           <LayoutItem>
             <NavBar />
+          </LayoutItem>
+          <LayoutItem>
+            <MainContent />
           </LayoutItem>
         </Container>
       </>

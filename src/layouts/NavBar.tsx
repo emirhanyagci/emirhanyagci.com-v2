@@ -9,8 +9,8 @@ const StyledNav = styled.nav`
   grid-template-columns: 1fr 4fr 1fr;
   border-radius: var(--layout-item-radius);
   background-color: var(--color-brand-blue-1);
-  background-image: url("/public/images/background-noise.png"),
-    url("/public/images/yellow-gradient.png");
+  background-image: url("/images/background-noise.png"),
+    url("/images/yellow-gradient.png");
   background-repeat: no-repeat;
   background-position: left, right;
   padding: 1.5rem 5rem;
