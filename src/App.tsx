@@ -7,6 +7,9 @@ import "./styles/fontStyles.css";
 import styled from "styled-components";
 const Container = styled.div`
   margin: 0 auto;
+  & > section:first-child {
+    margin-bottom: 3rem;
+  }
 `;
 const LayoutItem = styled.section`
   position: relative;

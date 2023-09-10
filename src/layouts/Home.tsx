@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 const StyledHome = styled.section<{ height: number }>`
-  min-height: ${(props) => `calc(100svh - ${props.height}px)`};
+  min-height: ${(props) => `calc(100vh - ${props.height}px)`};
 `;
 export default function Home() {
   const ref = useRef<HTMLElement>(null);
