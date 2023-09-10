@@ -4,6 +4,9 @@ const StyledMainContent = styled.main`
   background-color: var(--color-brand-blue-1);
   padding: 1.5rem 5rem;
   border-radius: var(--layout-item-radius);
+  background-image: url("/images/circle-gradient.png");
+  background-repeat: no-repeat;
+  background-position: -300px -300px;
 `;
 export default function MainContent() {
   return (

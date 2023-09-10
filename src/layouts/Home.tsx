@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import Greeting from "../components/Greeting";
+import Avatar from "../components/Avatar";
 const StyledHome = styled.section<{ height: number }>`
   min-height: ${(props) => `calc(100vh - ${props.height}px)`};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 `;
 export default function Home() {
   const ref = useRef<HTMLElement>(null);
@@ -12,7 +17,8 @@ export default function Home() {
   }, [ref]);
   return (
     <StyledHome height={height} ref={ref}>
-      Home
+      <Greeting />
+      <Avatar />
     </StyledHome>
   );
 }
