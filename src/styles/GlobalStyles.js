@@ -15,7 +15,7 @@ html{
 	--color-logo:#39E9F4;
 	--color-brand-orange-1 : #D1A124;
 	--color-brand-orange-2 : #C89D2A;
-
+  --section-padding:0 5rem;
 
   --layout-item-radius : 12px;
 }

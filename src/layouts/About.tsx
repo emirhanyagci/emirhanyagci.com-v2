@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import HeaderSection from "../components/HeaderSection";
 import LinkButton from "../components/LinkButton";
+import Contribute from "../components/Contribute";
 const StyledAbout = styled.section`
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 `;
 const WaveImg = styled.img`
+  position: absolute;
   user-select: none;
   pointer-events: none;
   width: 100%;
-  position: absolute;
-  left: 0;
   margin-top: -8rem;
   max-height: 100vh;
 `;
 const AboutContent = styled.main`
+  position: relative;
   text-align: center;
   color: white;
-  padding: 3rem;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -30,7 +33,7 @@ const AboutContent = styled.main`
     display: flex;
     justify-content: center;
     & > p {
-      max-width: 400px;
+      max-width: 500px;
     }
   }
 `;
@@ -41,9 +44,9 @@ const OrangeText = styled.span`
 export default function About() {
   return (
     <StyledAbout id="about">
-      <WaveImg src="/images/linear-wave.png" />
       <HeaderSection label="About" />
       <AboutContent>
+        <WaveImg src="/images/linear-wave.png" />
         <header className="headerAbout">
           I'm a <OrangeText> Fullstack</OrangeText> &
           <OrangeText> Web3</OrangeText> Developer <br />
@@ -59,6 +62,7 @@ export default function About() {
           </p>
         </div>
       </AboutContent>
+      <Contribute />
     </StyledAbout>
   );
 }
