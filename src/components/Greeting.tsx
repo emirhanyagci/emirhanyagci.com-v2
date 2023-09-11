@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 const StyledGreeting = styled.div`
   padding: 0 2rem;
 
@@ -26,8 +26,11 @@ const StyledGreeting = styled.div`
     align-items: start;
 
     & > button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       border: none;
-      padding: 0.6rem 2rem;
+      padding: 0.6rem 1rem;
       border-radius: 0.5rem;
       background-color: var(--color-brand-orange-1);
       color: white;
@@ -36,7 +39,8 @@ const StyledGreeting = styled.div`
       transition: all 300ms;
       box-shadow: rgba(250, 137, 54, 0.74) 0px 0px 14px;
       &:hover {
-        box-shadow: rgba(250, 137, 54, 0.74) 0px 0px 25px;
+        transform: translateY(-5px);
+        box-shadow: rgba(250, 137, 54, 0.74) 0px 0px 20px;
       }
     }
   }
@@ -61,7 +65,9 @@ export default function Greeting() {
           working on every aspect of web development, from the user interface to
           the server logic.
         </span>
-        <button>See my skills</button>
+        <button>
+          <span>See my skills</span> <FaArrowRightLong />
+        </button>
       </div>
     </StyledGreeting>
   );
