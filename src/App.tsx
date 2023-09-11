@@ -18,8 +18,8 @@ const LayoutItem = styled.section`
 function App() {
   return (
     <>
-      <GlobalStyles />
       <ResetStyles />
+      <GlobalStyles />
       <>
         <StarBackground />
         <Container className="appContainer">
