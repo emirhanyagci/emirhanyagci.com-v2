@@ -16,7 +16,7 @@ export default function Home() {
     setHeight(rect!.y);
   }, [ref]);
   return (
-    <StyledHome height={height} ref={ref}>
+    <StyledHome height={height - 6} ref={ref}>
       <Greeting />
       <Avatar />
     </StyledHome>
