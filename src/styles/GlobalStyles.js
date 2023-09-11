@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'josefin';
 }
 html{
+  scroll-behavior: smooth;
+
     font-size: 16px;
   }
 :root{
@@ -17,6 +19,7 @@ html{
 
   --layout-item-radius : 12px;
 }
+
 
 @media only screen and (min-width: 640px) {
   .appContainer {
@@ -51,8 +54,8 @@ html{
   html{
     font-size: 16px;
   }
-}
 
+}
 
 `;
 export default GlobalStyles;
