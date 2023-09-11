@@ -1,7 +1,7 @@
 import styled from "styled-components";
 interface NavButtonProps {
   href: string;
-  children: string;
+  children: React.ReactNode;
 }
 const Button = styled.button`
   background-color: transparent;
@@ -18,7 +18,7 @@ const Button = styled.button`
 `;
 export default function NavButton({ href, children }: NavButtonProps) {
   return (
-    <a href={href}>
+    <a href={`#${href}`}>
       <Button>{children}</Button>
     </a>
   );
