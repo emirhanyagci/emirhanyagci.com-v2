@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
 `;
 export default function NavBar() {
   return (
-    <StyledNav>
+    <StyledNav id="navbar">
       <div>
         <Logo />
       </div>
