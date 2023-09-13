@@ -1,9 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Pack, hierarchy } from "@visx/hierarchy";
-import { ParentSize, withScreenSize } from "@visx/responsive";
+import { ParentSize } from "@visx/responsive";
 import styled from "styled-components";
+import HeaderSection from "../components/HeaderSection";
+// interface CircleData {
+//   data: {
+//     name: string;
+//     imageUrl: string;
+//     linkUrl: string;
+//     value: number;
+//   };
+// }
+
 const StyledSkills = styled.section`
-  padding: var(--section-padding);
+  padding: 0 10%;
 `;
 const Circle = styled.a`
   position: absolute;
@@ -108,9 +119,7 @@ const data = [
     value: 10,
   },
 ];
-function Skills({ screenWidth, screenHeight }) {
-  console.log(screenHeight);
-
+function Skills({ screenHeight }: { screenHeight: number }) {
   const pack = React.useMemo(
     () => ({
       children: data,
@@ -120,25 +129,29 @@ function Skills({ screenWidth, screenHeight }) {
     }),
     []
   );
+
   const root = React.useMemo(
     () =>
       hierarchy(pack)
-        .sum((d) => d.value)
+        .sum((d: any) => d!.value)
         .sort((a, b) => (b.value ?? 0) - (a.value ?? 0)),
     [pack]
   );
   return (
     <StyledSkills>
-      <div
-        style={{
-          width: screenHeight,
-          height: screenHeight,
-          position: "relative",
-        }}
-      >
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
+      <HeaderSection label="Skills" />
+      <ParentSize>
+        {({ width = 800 }) => (
+          <div
+            style={{
+              width,
+              height: width,
+              position: "relative",
+            }}
+          >
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
 
               .spon-link {
                 transition: all .2s ease;
@@ -154,57 +167,59 @@ function Skills({ screenWidth, screenHeight }) {
                 opacity: 1;
               }
             `,
-          }}
-        />
-        <Pack
-          root={root}
-          size={[screenHeight, screenHeight]}
-          padding={screenHeight * 0.005}
-        >
-          {(packData) => {
-            const circles = packData.descendants().slice(1);
-            return (
-              <div>
-                {[...circles].reverse().map((circle, i) => {
-                  console.log(circle);
+              }}
+            />
+            <Pack
+              root={root}
+              size={[width, width]}
+              padding={screenHeight * 0.005}
+            >
+              {(packData) => {
+                const circles = packData.descendants().slice(1);
 
-                  const tooltipX =
-                    circle.x > screenHeight / 2 ? "left" : "right";
-                  const tooltipY =
-                    circle.y > screenHeight / 2 ? "top" : "bottom";
-                  return (
-                    <Circle
-                      key={`circle-${i}`}
-                      className="spon-link"
-                      href={circle.data?.linkUrl}
-                      style={{
-                        left: circle.x,
-                        top: circle.y,
-                        width: circle.r * 2,
-                        height: circle.r * 2,
-                      }}
-                    >
-                      <CircleImage
-                        key={`circle-${i}`}
-                        url={circle.data.imageUrl}
-                      ></CircleImage>
-                      <CircleToolTip
-                        className="spon-tooltip"
-                        tooltipX={tooltipX}
-                        tooltipY={tooltipY}
-                      >
-                        <p>{circle.data.name}</p>
-                      </CircleToolTip>
-                    </Circle>
-                  );
-                })}
-              </div>
-            );
-          }}
-        </Pack>
-      </div>
+                return (
+                  <div>
+                    {[...circles].reverse().map((circle: any, i) => {
+                      console.log(circle);
+
+                      const tooltipX = circle.x > width / 2 ? "left" : "right";
+                      const tooltipY = circle.y > width / 2 ? "top" : "bottom";
+                      return (
+                        <Circle
+                          key={`circle-${i}`}
+                          className="spon-link"
+                          href={circle?.data?.linkUrl}
+                          style={{
+                            left: circle.x,
+                            top: circle.y,
+                            width: circle.r * 2,
+                            height: circle.r * 2,
+                          }}
+                        >
+                          <CircleImage
+                            key={`circle-${i}`}
+                            url={circle.data.imageUrl}
+                          ></CircleImage>
+                          <CircleToolTip
+                            className="spon-tooltip"
+                            tooltipX={tooltipX}
+                            tooltipY={tooltipY}
+                          >
+                            <p>{circle.data.name}</p>
+                          </CircleToolTip>
+                        </Circle>
+                      );
+                    })}
+                  </div>
+                );
+              }}
+            </Pack>
+          </div>
+        )}
+      </ParentSize>
     </StyledSkills>
   );
 }
-export default withScreenSize(Skills);
+
+export default Skills;
 // you removed sort side
