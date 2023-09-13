@@ -4,7 +4,7 @@ import Greeting from "../components/Greeting";
 import Avatar from "../components/Avatar";
 const StyledHome = styled.section<{ distanceHeight: number }>`
   padding: var(--section-padding);
-  min-height: ${(props) => `calc(100vh - (${props.distanceHeight}px + 3rem))`};
+  min-height: ${(props) => `calc(100vh - (${props.distanceHeight}px))`};
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -20,7 +20,7 @@ export default function Home() {
     console.log(navRect);
   }, [ref]);
   return (
-    <StyledHome distanceHeight={height - 5} ref={ref}>
+    <StyledHome distanceHeight={height} ref={ref}>
       <Greeting />
       <Avatar />
     </StyledHome>
