@@ -108,7 +108,9 @@ const data = [
     value: 10,
   },
 ];
-export default function Skills() {
+function Skills({ screenWidth, screenHeight }) {
+  console.log(screenHeight);
+
   const pack = React.useMemo(
     () => ({
       children: data,
@@ -127,19 +129,16 @@ export default function Skills() {
   );
   return (
     <StyledSkills>
-      <ParentSize>
-        {({ width }) => {
-          return (
-            <div
-              style={{
-                width,
-                height: width,
-                position: "relative",
-              }}
-            >
-              <style
-                dangerouslySetInnerHTML={{
-                  __html: `
+      <div
+        style={{
+          width: screenHeight,
+          height: screenHeight,
+          position: "relative",
+        }}
+      >
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
 
               .spon-link {
                 transition: all .2s ease;
@@ -155,56 +154,57 @@ export default function Skills() {
                 opacity: 1;
               }
             `,
-                }}
-              />
-              <Pack root={root} size={[width, width]} padding={width * 0.005}>
-                {(packData) => {
-                  const circles = packData.descendants().slice(1);
-                  return (
-                    <div>
-                      {[...circles].reverse().map((circle, i) => {
-                        console.log(circle);
+          }}
+        />
+        <Pack
+          root={root}
+          size={[screenHeight, screenHeight]}
+          padding={screenHeight * 0.005}
+        >
+          {(packData) => {
+            const circles = packData.descendants().slice(1);
+            return (
+              <div>
+                {[...circles].reverse().map((circle, i) => {
+                  console.log(circle);
 
-                        const tooltipX =
-                          circle.x > width / 2 ? "left" : "right";
-                        const tooltipY =
-                          circle.y > width / 2 ? "top" : "bottom";
-                        return (
-                          <Circle
-                            key={`circle-${i}`}
-                            className="spon-link"
-                            href={circle.data?.linkUrl}
-                            style={{
-                              left: circle.x,
-                              top: circle.y,
-                              width: circle.r * 2,
-                              height: circle.r * 2,
-                            }}
-                          >
-                            <CircleImage
-                              key={`circle-${i}`}
-                              url={circle.data.imageUrl}
-                            ></CircleImage>
-                            <CircleToolTip
-                              className="spon-tooltip"
-                              tooltipX={tooltipX}
-                              tooltipY={tooltipY}
-                            >
-                              <p>{circle.data.name}</p>
-                            </CircleToolTip>
-                          </Circle>
-                        );
-                      })}
-                    </div>
+                  const tooltipX =
+                    circle.x > screenHeight / 2 ? "left" : "right";
+                  const tooltipY =
+                    circle.y > screenHeight / 2 ? "top" : "bottom";
+                  return (
+                    <Circle
+                      key={`circle-${i}`}
+                      className="spon-link"
+                      href={circle.data?.linkUrl}
+                      style={{
+                        left: circle.x,
+                        top: circle.y,
+                        width: circle.r * 2,
+                        height: circle.r * 2,
+                      }}
+                    >
+                      <CircleImage
+                        key={`circle-${i}`}
+                        url={circle.data.imageUrl}
+                      ></CircleImage>
+                      <CircleToolTip
+                        className="spon-tooltip"
+                        tooltipX={tooltipX}
+                        tooltipY={tooltipY}
+                      >
+                        <p>{circle.data.name}</p>
+                      </CircleToolTip>
+                    </Circle>
                   );
-                }}
-              </Pack>
-            </div>
-          );
-        }}
-      </ParentSize>
+                })}
+              </div>
+            );
+          }}
+        </Pack>
+      </div>
     </StyledSkills>
   );
 }
-
+export default withScreenSize(Skills);
 // you removed sort side
