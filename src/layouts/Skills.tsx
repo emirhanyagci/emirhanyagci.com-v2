@@ -11,6 +11,7 @@ import HeaderSection from "../components/HeaderSection";
 //     linkUrl: string;
 //     value: number;
 //   };
+//   [key: any]: any;
 // }
 
 const StyledSkills = styled.section`
