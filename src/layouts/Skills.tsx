@@ -120,7 +120,7 @@ const data = [
     value: 10,
   },
 ];
-function Skills({ screenHeight }: { screenHeight: number }) {
+function Skills() {
   const pack = React.useMemo(
     () => ({
       children: data,
@@ -170,11 +170,7 @@ function Skills({ screenHeight }: { screenHeight: number }) {
             `,
               }}
             />
-            <Pack
-              root={root}
-              size={[width, width]}
-              padding={screenHeight * 0.005}
-            >
+            <Pack root={root} size={[width, width]} padding={width * 0.005}>
               {(packData) => {
                 const circles = packData.descendants().slice(1);
 
