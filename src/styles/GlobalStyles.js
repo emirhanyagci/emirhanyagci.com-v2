@@ -13,6 +13,8 @@ html{
 	--color-brand-blue-1:#1D1D2B;
 	--color-brand-blue-2:rgba(30, 41, 59);
 	--color-logo:#39E9F4;
+  --card-bg:rgba(30, 41, 59,.5);
+  --card-border:#1A3A54;
 	--color-brand-orange-1 : #D1A124;
 	--color-brand-orange-2 : #C89D2A;
   --section-padding:0 5rem;
