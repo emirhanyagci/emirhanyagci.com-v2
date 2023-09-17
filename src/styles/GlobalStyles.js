@@ -17,7 +17,8 @@ html{
   --card-border:#1A3A54;
 	--color-brand-orange-1 : #D1A124;
 	--color-brand-orange-2 : #C89D2A;
-  --section-padding:0 5rem;
+  --section-padding-y:5rem;
+  --section-padding-x:5rem;
 
   --layout-item-radius : 12px;
 }

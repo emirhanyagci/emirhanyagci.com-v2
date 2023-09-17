@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Home, About, Skills, Projects, Contact } from "./index";
+
 const StyledMainContent = styled.main`
+  padding-bottom: 5rem;
   background-color: var(--color-brand-blue-1);
   border-radius: var(--layout-item-radius);
   background-image: url("/images/circle-gradient.png");

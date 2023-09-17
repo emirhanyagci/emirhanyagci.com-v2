@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Greeting from "../components/Greeting";
 import Avatar from "../components/Avatar";
 const StyledHome = styled.section<{ distanceHeight: number }>`
-  padding: var(--section-padding);
+  padding: 0rem var(--section-padding-x);
   min-height: ${(props) => `calc(100vh - (${props.distanceHeight}px))`};
   display: grid;
   grid-template-columns: 1fr 1fr;
