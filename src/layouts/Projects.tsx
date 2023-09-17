@@ -5,6 +5,7 @@ const StyledProjects = styled.section`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  min-height: 50vh;
   padding: var(--section-padding-y) var(--section-padding-x);
 `;
 const ProjectsContent = styled.div`

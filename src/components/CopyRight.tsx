@@ -8,6 +8,9 @@ const StyledCopyRight = styled.div`
   & a {
     text-decoration: none;
     color: var(--color-brand-orange-1);
+    &:hover {
+      font-weight: 400;
+    }
   }
 `;
 export default function CopyRight() {
