@@ -5,9 +5,8 @@ const StyledCardButton = styled.a`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #052b47;
   border: 2px var(--card-border) solid;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 0.4rem 0.2rem;
   & > button {
     cursor: pointer;

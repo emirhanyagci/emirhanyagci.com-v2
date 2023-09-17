@@ -8,7 +8,7 @@ const StyledTagList = styled.ul`
     display: inline-block;
     font-size: 1rem;
     background-color: #334155;
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
     padding: 0.3rem;
     & > .hash {
