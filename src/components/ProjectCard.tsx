@@ -2,6 +2,7 @@ import { BsGithub } from "react-icons/bs";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import styled from "styled-components";
 import CardButton from "./CardButton";
+import TagList from "./TagList";
 const StyledProjectCard = styled.div`
   background-color: var(--card-bg);
   border: 2px var(--card-border) solid;
@@ -11,7 +12,7 @@ const StyledProjectCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
   & .projectTitle {
     color: white;
     font-size: 1.5rem;
@@ -20,6 +21,9 @@ const StyledProjectCard = styled.div`
     display: flex;
     align-items: center;
     gap: 1.4rem;
+  }
+  & .cardImage {
+    border-radius: var(--layout-item-radius);
   }
   & .cardButtons {
     display: flex;
@@ -33,6 +37,7 @@ export default function ProjectCard() {
       <div className="cardBanner">
         <div>
           <img
+            className="cardImage"
             width="100%"
             src="https://cdn.discordapp.com/attachments/529558352213311507/1151881815813005312/image.png"
             alt=""
@@ -47,6 +52,7 @@ export default function ProjectCard() {
           </CardButton>
         </div>
       </div>
+      <TagList />
       <div>
         <span className="projectTitle">Pizza Ordering App</span>
       </div>

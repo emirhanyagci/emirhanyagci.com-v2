@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
-    top: 3rem;
+    bottom: -0.5rem;
     width: 4rem;
 
     border-bottom: 3px solid orange;
