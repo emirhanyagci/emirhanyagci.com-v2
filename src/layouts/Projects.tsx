@@ -7,7 +7,7 @@ const StyledProjects = styled.section`
   gap: 3rem;
   padding: var(--section-padding-y) var(--section-padding-x);
 `;
-const ProjectsWrapper = styled.div`
+const ProjectsContent = styled.div`
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -18,11 +18,11 @@ export default function Projects() {
   return (
     <StyledProjects>
       <HeaderSection label="Projects" />
-      <ProjectsWrapper>
+      <ProjectsContent>
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
-      </ProjectsWrapper>
+      </ProjectsContent>
     </StyledProjects>
   );
 }
