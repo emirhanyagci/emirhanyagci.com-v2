@@ -44,10 +44,18 @@ export default function ProjectCard() {
           />
         </div>
         <div className="cardButtons">
-          <CardButton href="#">
+          <CardButton
+            href="#"
+            borderSize="2px"
+            borderColor="var(--card-border)"
+          >
             <PiArrowUpRightBold size="1.5rem" color="white" />
           </CardButton>
-          <CardButton href="#">
+          <CardButton
+            href="#"
+            borderSize="2px"
+            borderColor="var(--card-border)"
+          >
             <BsGithub size="1.5rem" color="white" />
           </CardButton>
         </div>
