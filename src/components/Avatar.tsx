@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 const StyledAvatar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   position: relative;
-  background-image: url("/images/avatar.png"),
-    url("/images/circle-gradient.png");
+  background-image: url("/images/circle-gradient.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 80%, 100%;
-  & > img {
-    width: 3.2rem;
+  background-size: 100%;
+  & > .imageWrapper {
+    position: relative;
   }
 `;
 const Sparkle = styled.img<{
@@ -19,17 +21,26 @@ const Sparkle = styled.img<{
   bottom?: number;
 }>`
   position: absolute;
-  top: ${(props) => `${props.top}px`};
-  left: ${(props) => `${props.left}px`};
-  right: ${(props) => `${props.right}px`};
-  bottom: ${(props) => `${props.bottom}px`};
+
+  top: ${(props) => `${props.top}%`};
+  left: ${(props) => `${props.left}%`};
+  right: ${(props) => `${props.right}%`};
+  bottom: ${(props) => `${props.bottom}%`};
 `;
 export default function Avatar() {
   return (
     <StyledAvatar>
-      <Sparkle left={0} top={200} src="/images/sparkle.png" alt="" />
-      <Sparkle left={50} bottom={130} src="/images/sparkle.png" alt="" />
-      <Sparkle right={0} top={405} src="/images/sparkle.png" alt="" />
+      <div className="imageWrapper">
+        <img
+          className="avatar"
+          src="/images/avatar.png"
+          alt=""
+          unselectable="on"
+        />
+        <Sparkle left={-10} top={0} src="/images/sparkle.png" alt="" />
+        <Sparkle left={-15} bottom={-20} src="/images/sparkle.png" alt="" />
+        <Sparkle right={-10} top={50} src="/images/sparkle.png" alt="" />
+      </div>
     </StyledAvatar>
   );
 }

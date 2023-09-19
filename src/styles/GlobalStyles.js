@@ -4,13 +4,8 @@ const GlobalStyles = createGlobalStyle`
 *{
   font-family: 'josefin';
 }
-html{
-  scroll-behavior: smooth;
-
-    font-size: 16px;
-  }
 :root{
-	--color-brand-blue-1:#1D1D2B;
+  --color-brand-blue-1:#1D1D2B;
 	--color-brand-blue-2:rgba(30, 41, 59);
 	--color-logo:#39E9F4;
   --card-bg:rgba(30, 41, 59,.5);
@@ -19,11 +14,18 @@ html{
 	--color-brand-orange-2 : #C89D2A;
   --section-padding-y:4rem;
   --section-padding-x:5rem;
-
+  
   --layout-item-radius : 12px;
 }
 
+html{
+  scroll-behavior: smooth;
 
+    font-size: 13px;
+}
+.appContainer {
+    width: 100%;
+  }
 @media only screen and (min-width: 640px) {
   .appContainer {
     width: 100%;

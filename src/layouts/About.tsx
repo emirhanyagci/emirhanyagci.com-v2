@@ -6,6 +6,10 @@ const StyledAbout = styled.section`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  background-image: url("/images/square.png"), url("/images/square.png"),
+    url("/images/square.png");
+  background-repeat: no-repeat;
+  background-position: 5% 55px, calc(100% - 30px) top, 90%;
 `;
 const WaveImg = styled.img`
   position: absolute;
@@ -19,13 +23,13 @@ const AboutContent = styled.main`
   position: relative;
   text-align: center;
   color: white;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
   font-weight: 300;
   justify-content: center;
   font-size: 1.4rem;
+
   & .headerAbout {
     line-height: 1.5rem;
   }

@@ -21,8 +21,8 @@ const CircleImage = styled.div<{ url: string }>`
   background-position: center;
   background-size: contain;
   border-radius: 100%;
-  width: 95%;
-  height: 95%;
+  width: 102%;
+  height: 102%;
 `;
 const CircleToolTip = styled.div<{ tooltipX: string; tooltipY: string }>`
   position: absolute;
@@ -59,24 +59,23 @@ const data = [
   {
     name: "React",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "https://cdn.discordapp.com/attachments/529558352213311507/1153289120953679882/Untitled_design.png",
     linkUrl: "https://react.dev/",
     value: 15,
   },
   {
     name: "React",
 
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+    imageUrl: "https://assets.stickpng.com/thumbs/62a74f71223343fbc2207d04.png",
     linkUrl: "https://react.dev/",
     value: 10,
   },
   {
-    name: "React",
+    name: "Github",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
     linkUrl: "https://react.dev/",
-    value: 10,
+    value: 5,
   },
   {
     name: "React",
