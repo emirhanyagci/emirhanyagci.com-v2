@@ -6,7 +6,7 @@ import ResetStyles from "./styles/ResetStyle.js";
 import "./styles/fontStyles.css";
 import styled from "styled-components";
 const Container = styled.div`
-  margin: 0 auto;
+  margin: auto;
   & > section:first-child {
     margin-bottom: 3rem;
   }

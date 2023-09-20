@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'josefin';
 }
 :root{
-  --color-brand-blue-1:#1D1D2B;
+  --color-brand-blue-1:rgb(17 24 39);
 	--color-brand-blue-2:rgba(30, 41, 59);
 	--color-logo:#39E9F4;
   --card-bg:rgba(30, 41, 59,.5);
