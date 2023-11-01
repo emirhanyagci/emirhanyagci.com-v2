@@ -34,6 +34,7 @@ html{
     font-size: 13px;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .appContainer {
     width: 100%;
@@ -54,7 +55,7 @@ html{
 @media only screen and (min-width: 1280px) {
   .appContainer {
     width: 90%;
-	max-width: 1280px;
+	  max-width: 1280px;
   }
   html{
     font-size: 16px;
