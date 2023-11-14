@@ -6,11 +6,11 @@ const StyledHome = styled.section<{ distanceHeight: number }>`
   padding: 0rem var(--section-padding-x);
   min-height: ${(props) => `calc(100vh - (${props.distanceHeight}px))`};
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   align-items: center;
-  @media only screen and (min-width: 640px) {
-    grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
   }
 `;
 export default function Home() {

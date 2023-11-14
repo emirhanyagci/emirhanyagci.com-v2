@@ -9,7 +9,7 @@ const StyledAvatar = styled.div`
   background-image: url("/images/circle-gradient.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   & > .imageWrapper {
     position: relative;
   }
@@ -37,9 +37,27 @@ export default function Avatar() {
           alt=""
           unselectable="on"
         />
-        <Sparkle left={-10} top={0} src="/images/sparkle.png" alt="" />
-        <Sparkle left={-15} bottom={-20} src="/images/sparkle.png" alt="" />
-        <Sparkle right={-10} top={50} src="/images/sparkle.png" alt="" />
+        <Sparkle
+          left={-10}
+          top={0}
+          src="/images/sparkle.png"
+          alt=""
+          className="sparkle-shape"
+        />
+        <Sparkle
+          left={-15}
+          bottom={-20}
+          src="/images/sparkle.png"
+          alt=""
+          className="sparkle-shape"
+        />
+        <Sparkle
+          right={-10}
+          top={50}
+          src="/images/sparkle.png"
+          alt=""
+          className="sparkle-shape"
+        />
       </div>
     </StyledAvatar>
   );

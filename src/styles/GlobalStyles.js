@@ -62,6 +62,17 @@ html{
   }
 
 }
+@media only screen and (max-width: 768px) {
+  .sparkle-shape{
+    display: none;
+  }
 
+}
+@media only screen and (max-width: 640px) {
+  #about{
+    background-image: none;
+  }
+
+}
 `;
 export default GlobalStyles;
